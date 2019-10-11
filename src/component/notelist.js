@@ -13,11 +13,12 @@ export default class NoteList extends React.Component {
     }
 
     render() {
+        const {note1, note2, note3} = this.state
         return (
             <Container>
                 <Row>
                     <Col>
-                        
+                        {note1}
                     </Col>
                 </Row>
             </Container>

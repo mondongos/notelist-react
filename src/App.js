@@ -6,7 +6,7 @@ import NoteList from './component/notelist'
 function App() {
   return (
     <div className="App">
-      
+      <NoteList/>
     </div>
   );
 }
