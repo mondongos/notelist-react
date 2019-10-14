@@ -9,14 +9,14 @@ export default class AddNote extends React.Component {
         } else {
             return (
                 <Form.Group>
-                    <Form.Label>Notes Title</Form.Label>
+                    <Form.Label><strong>Title</strong></Form.Label>
                     <Form.Control 
                     as ="textarea" 
                     rows="1"
                     name="noteTitle"
                     value={this.props.noteTitle}
                     onChange={this.props.handleChange}/>
-                    <Form.Label>Notes Body</Form.Label>
+                    <Form.Label><strong>Whats on your mind?</strong></Form.Label>
                     <Form.Control 
                     as ="textarea" 
                     rows="3"

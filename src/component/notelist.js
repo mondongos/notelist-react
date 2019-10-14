@@ -32,7 +32,6 @@ export default class NoteList extends React.Component {
 
     addNote = () => {
         let buttonActive = this.state.addnotesactive
-        console.log(this.state.notes)
             if (buttonActive) {
                 this.setState({addnotesactive: false})
             } else {
@@ -65,8 +64,12 @@ export default class NoteList extends React.Component {
 
     submitNote = (e) => {
         e.preventDefault()
-        this.setState({notes: [...this.state.notes, ...[[{title: this.state.noteTitle}, {body: this.state.noteBody}]]]})
-        this.setState({addnotesactive: false})
+        this.setState({
+            addnotesactive: false, 
+            noteTitle: '', 
+            noteBody: '', 
+            notes: [...this.state.notes, ...[[{title: this.state.noteTitle}, {body: this.state.noteBody}]]]
+        })
     }
 
     
@@ -74,6 +77,7 @@ export default class NoteList extends React.Component {
     render() {
         return (
             <Container>
+                <h1>Epistle</h1>
                 <br></br>
                 <Row>
                     <Col>
@@ -88,9 +92,7 @@ export default class NoteList extends React.Component {
                         handleChange={this.handleChange}
                         noteTitle={this.state.noteTitle}
                         noteBody={this.state.noteBody}/>
-                    </Col>
-                    <Col>
-                    {this.submitNoteButton()}
+                        {this.submitNoteButton()}
                     </Col>
                 </Row>
                 <br></br>
