@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Row, Col} from 'react-bootstrap'
+import {Container, Card, Row, Col, Button } from 'react-bootstrap'
 
 export default class NoteList extends React.Component {
 
@@ -18,9 +18,30 @@ export default class NoteList extends React.Component {
             <Container>
                 <Row>
                     <Col>
-                        {note1}
+                        <h1>Notes App</h1>
                     </Col>
                 </Row>
+                <br></br>
+                <Row>
+                    <Col>
+                        <Button
+                        variant="primary">
+                            Add new note
+                        </Button>
+                    </Col>
+                </Row>
+                <br></br>
+                <Row>
+                    <Col>
+                        <Card>
+                            <Card.Body>
+                                {this.state.note1}
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+
+
             </Container>
 
         )
