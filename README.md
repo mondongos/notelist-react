@@ -1,5 +1,5 @@
 # Epistle 
-Note taking app built in React. 
+Note taking app built in React. Styling tbc
 
 ### How to use 
 1. Clone this repo
